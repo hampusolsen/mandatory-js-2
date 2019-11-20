@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Tic-Tac-Toe... the space opera!</title>
+
+		<link rel="stylesheet" href="playfield.css" />
+		<link rel="stylesheet" href="title-menu.css" />
+		<link rel="stylesheet" href="character-menu.css" />
+
+		<script src="script.js" defer></script>
+		<link
+			href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Exo+2|Tomorrow&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/c0114ebe51.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div id="spaceBackdrop"></div>
+
+		<img
+			src="resources/composite-images/spacebackdrop.jpg"
+			alt=""
+			id="theVoid"
+		/>
+
+		<button id="startGame">START GAME</button>
+
+		<div id="characterSelection">
+			<div class="title">
+				<h1>CHOOSE YOUR CHARACTER</h1>
+				<a id="vsAI">(or click here to play vs a sexually ambiguous robot)</a>
+			</div>
+			<div class="characterDisplay">
+				<img id="male" src="resources/composite-images/male.png" alt="male" />
+				<img
+					id="female"
+					src="resources/composite-images/female.png"
+					alt="female"
+				/>
+			</div>
+			<div class="playerPiece one">
+				<img src="resources/circle.png" alt="circle piece" />
+			</div>
+			<div class="playerPiece two">
+				<img src="resources/cross.png" alt="cross piece" />
+			</div>
+		</div>
+
+		<img
+			src="resources/composite-images/spacecraft.png"
+			alt="spaceship"
+			id="spaceship"
+		/>
+
+		<div id="playfield">
+			<img src="resources/composite-images/chains.png" alt="chains" />
+			<img src="resources/composite-images/playfield-top.png" alt="" />
+			<div class="flexRow">
+				<img src="resources/composite-images/playfield-left.png" alt="" />
+				<div id="playfieldActive">
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+					<div class="pieceBox">
+						<div class="pieceBoxInside"></div>
+					</div>
+				</div>
+				<img src="resources/composite-images/playfield-right.png" alt="" />
+			</div>
+			<img src="resources/composite-images/playfield-bottom.png" alt="" />
+		</div>
+
+		<footer>
+			<a href="index.htm">Tic-Tac-Toe... the space opera!</a>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,165 @@
+div#characterSelection {
+	height: 40vh;
+	width: 45vw;
+	background: url(resources/composite-images/circlesandcrosses.png) top,
+		url(resources/composite-images/sun.png) no-repeat bottom,
+		linear-gradient(#b9006e, #ffe600, #cce51c);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 10px solid #3a0256;
+	box-shadow: 3px 3px purple;
+	position: absolute;
+	display: none;
+}
+
+div#characterSelection > div.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div#characterSelection > div.title > h1 {
+	color: #ffe600;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 3rem;
+	font-weight: bold;
+	text-shadow: 0px 2px #ccc51c;
+	padding-top: 25px;
+	padding-bottom: 0px;
+	cursor: default;
+}
+
+div#characterSelection > div.title > a {
+	padding-top: 0px;
+	margin-top: 0px;
+	color: yellow;
+	text-shadow: 1px 1px #f05a28;
+	cursor: pointer;
+	font-family: 'Barlow Condensed', sans-serif;
+	margin-bottom: 50px;
+}
+
+div#characterSelection > div.characterDisplay > img {
+	filter: grayscale(40%);
+	position: relative;
+	z-index: 4;
+}
+
+div#characterSelection > div.characterDisplay > img#male {
+	float: left;
+	right: 1000px;
+	transition: right 0.6s;
+}
+
+div#characterSelection > div.characterDisplay > img#male:hover {
+	filter: grayscale(0%);
+}
+
+div#characterSelection > div.characterDisplay > img#female {
+	float: right;
+	left: 1000px;
+	transition: left 0.6s;
+}
+
+div#characterSelection > div.characterDisplay > img#female:hover {
+	filter: grayscale(0%);
+}
+
+@keyframes bringCharacterSelection {
+	from {
+		transform: translateY(200%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes sendCharacterSelection {
+	from {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(200%);
+		opacity: 0;
+	}
+}
+
+div#characterSelection > div.playerPiece {
+	position: absolute;
+	z-index: 5;
+}
+
+div#characterSelection > div.one {
+	left: 0px;
+	transform: translate(-280%, -200%) scale(0.01);
+}
+
+@keyframes bringPlayerOnePiece {
+	from {
+		transform: translate(-280%, -200%) scale(0.01) rotate(0deg);
+	}
+	to {
+		transform: translate(20%, 40%) scale(0.7) rotate(720deg);
+	}
+}
+
+@keyframes sendPlayerOnePiece {
+	from {
+		transform: translate(20%, 40%) scale(0.7) rotate(720deg);
+		opacity: 1;
+	}
+	to {
+		transform: translate(calc(-1000px + 20%), 40%) scale(0.7) rotate(720deg);
+		opacity: 0;
+	}
+}
+
+div#characterSelection > div.two {
+	right: 0px;
+	transform: translate(280%, -200%) scale(0.1);
+}
+
+@keyframes bringPlayerTwoPiece {
+	from {
+		transform: translate(280%, -200%) scale(0.01) rotate(0deg);
+	}
+	to {
+		transform: translate(-20%, 40%) scale(0.7) rotate(-720deg);
+	}
+}
+
+@keyframes sendPlayerTwoPiece {
+	from {
+		transform: translate(-20%, 40%) scale(0.7) rotate(-720deg);
+		opacity: 1;
+	}
+	to {
+		transform: translate(calc(1000px - 20%), 40%) scale(0.7) rotate(-720deg);
+		opacity: 0;
+	}
+}
+
+img#spaceship {
+	z-index: 9;
+	position: absolute;
+	bottom: -500px;
+}
+
+@keyframes spaceship {
+	0% {
+		bottom: -500px;
+		transform: scale(3);
+	}
+	30% {
+		bottom: 30vh;
+		transform: scale(1);
+	}
+	100% {
+		bottom: calc(100vh + 200px);
+		transform: scale(0.3);
+	}
+}
